@@ -1,0 +1,93 @@
+:root{
+  --header-bg:#1b4fa3;
+  --green-row:#c9f0d1;
+  --yellow-row:#fff1b3;
+  --red-row:#ffd0d0;
+  --card-bg:#ffffff;
+  --excellent-bg:#a6f3b2;
+  --hover-bg: rgba(27,79,163,0.07);
+}
+
+body{
+  font-family: Segoe UI, Arial;
+  background:#f2f5f3;
+  margin:20px;
+}
+
+h1{
+  text-align:center;
+  color:var(--header-bg);
+}
+
+form{
+  max-width:760px;
+  margin:auto;
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+input{
+  padding:8px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+button{
+  padding:10px 14px;
+  border:none;
+  border-radius:8px;
+  background:var(--header-bg);
+  color:white;
+  cursor:pointer;
+}
+
+.table-wrap{
+  margin-top:20px;
+  background:white;
+  padding:10px;
+  border-radius:8px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+th,td{
+  border:1px solid #ddd;
+  padding:8px;
+  text-align:center;
+}
+
+thead{
+  background:var(--header-bg);
+  color:white;
+}
+
+.row-green td{ background:var(--green-row); }
+.row-yellow td{ background:var(--yellow-row); }
+.row-red td{ background:var(--red-row); }
+
+.excellent{
+  background:var(--excellent-bg) !important;
+  #report{
+  max-width: 900px;   
+  margin: 20px auto;
+}
+
+#report canvas{
+  max-width: 100%;
+  height: 360px !important;  
+}
+
+}
+

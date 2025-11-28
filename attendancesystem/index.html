@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Attendance Management</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Attendance Management System</h1>
+
+  <form id="studentForm" autocomplete="off">
+    <div class="form-group">
+      <label>Student ID</label>
+      <input id="studentId" type="text">
+      <div id="idError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Last Name</label>
+      <input id="lastName" type="text">
+      <div id="lastNameError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label>First Name</label>
+      <input id="firstName" type="text">
+      <div id="firstNameError" class="error"></div>
+    </div>
+
+    <div class="form-group">
+      <label>Course</label>
+      <input id="course" type="text">
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input id="email" type="email">
+      <div id="emailError" class="error"></div>
+    </div>
+
+    <button type="submit">Add Student</button>
+  </form>
+
+  <p id="confirmation"></p>
+
+  <div class="table-wrap">
+    <table id="attendanceTable">
+      <thead>
+        <tr>
+          <th rowspan="2">ID</th>
+          <th rowspan="2">Last</th>
+          <th rowspan="2">First</th>
+          <th rowspan="2">Course</th>
+          <th colspan="6">Attendance</th>
+          <th colspan="6">Participation</th>
+          <th rowspan="2">Abs</th>
+          <th rowspan="2">Message</th>
+        </tr>
+        <tr>
+          <th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th>
+          <th>P1</th><th>P2</th><th>P3</th><th>P4</th><th>P5</th><th>P6</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>232331623108</td>
+          <td class="student-name">Bennadji</td>
+          <td>Wassim</td>
+          <td>Web Development</td>
+
+          <td><input type="checkbox" class="attendance"></td>
+          <td><input type="checkbox" class="attendance"></td>
+          <td><input type="checkbox" class="attendance"></td>
+          <td><input type="checkbox" class="attendance"></td>
+          <td><input type="checkbox" class="attendance"></td>
+          <td><input type="checkbox" class="attendance"></td>
+
+          <td><input type="checkbox" class="participation"></td>
+          <td><input type="checkbox" class="participation"></td>
+          <td><input type="checkbox" class="participation"></td>
+          <td><input type="checkbox" class="participation"></td>
+          <td><input type="checkbox" class="participation"></td>
+          <td><input type="checkbox" class="participation"></td>
+
+          <td class="absences">0</td>
+          <td><input class="message-input" readonly></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div id="controls">
+    <button id="showReport">Show Report</button>
+  </div>
+
+  <div>
+    <button id="highlightBtn">Highlight Excellent</button>
+    <button id="resetColorsBtn">Reset Colors</button>
+  </div>
+
+  <div id="report">
+    <div class="stat-cards">
+      <div class="card total" id="totalStudents">Total: 0</div>
+      <div class="card present" id="presentStudents">Present: 0</div>
+      <div class="card part" id="participatedStudents">Participated: 0</div>
+    </div>
+    <canvas id="reportChart"></canvas>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
