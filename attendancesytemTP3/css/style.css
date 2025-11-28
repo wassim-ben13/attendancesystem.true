@@ -44,4 +44,32 @@ button:hover {
   background: white;
   padding: 10px;
   border-radius: 10px;
+  .table-box{
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: #111827;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+th, td{
+  padding: 10px;
+  border-bottom: 1px solid #374151;
+}
+
+th{
+  background: #2563eb;
+}
+
+tr:hover{
+  background: #1f2933;
+}
+
 }
